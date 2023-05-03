@@ -1,95 +1,362 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: white;
-    text-decoration: none;
-    list-style: none;
-    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
 }
 
+/* Página login */
+
+.main-page-login {
+  background: url("/img/backgroud-netflix.png") no-repeat;
+  width: 100%;
+  height: 1080px;
+  position: absolute;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1080px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.logo-netflix {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0, transparent);
+  border-bottom: transparent;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo-netflix-link-box {
+  width: auto;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  margin-left: 3%;
+}
+
+.login-content {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.login-box {
+  width: 450px;
+  margin: 90px auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 60px 68px 40px;
+  border-radius: 4px;
+}
+
+.login-box h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+
+.login-form {
+  width: 100%;
+  height: 290px;
+}
+
+.login-form-box {
+  width: 100%;
+  padding-bottom: 16px;
+}
+
+.login-form-input {
+  position: relative;
+}
+
+.login-form-input label {
+  position: absolute;
+  left: 20px;
+  top: 13px;
+  font-size: 16px;
+  color: #8c8c8c;
+  transition: 0.1s ease-in-out;
+}
+
+.login-form-input input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  padding: 15px 21px 0 21px;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+}
+
+.login-form-input input:focus {
+  background-color: #474747;
+}
+
+.login-form-input input:focus ~ label,
+.login-form-input input:valid ~ label {
+  transform: translateY(-8px);
+  font-size: 11px;
+}
+
+.login-form-error {
+  display: none;
+}
+
+.login-form-button button {
+  width: 100%;
+  padding: 14px;
+  margin: 24px 0 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background-color: #e50914;
+  cursor: pointer;
+}
+
+.login-form-remhel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.login-form-help span,
+.login-form-remember span {
+  color: #b3b3b3;
+}
+
+.login-form-remember {
+  position: relative;
+}
+
+.login-form-remember input {
+  display: none;
+}
+
+.login-form-remember input + span:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: #737373;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  position: absolute;
+  left: 0;
+}
+
+.login-form-remember input:checked + span:before {
+  background-color: #0071eb !important;
+}
+
+.login-form-remember span {
+  margin-left: 20px;
+}
+
+.login-form-help {
+  cursor: pointer;
+}
+
+.login-form-help:hover {
+  text-decoration: underline;
+}
+
+.login-box-end {
+  width: 100%;
+  height: 180px;
+  margin-top: 16px;
+}
+
+.login-box-new span {
+  font-size: 16px !important;
+}
+
+.login-box-spanPointer {
+  color: white !important;
+  cursor: pointer;
+}
+
+.span-saibaMais {
+  color: #0071eb !important;
+}
+
+.login-box-spanPointer:hover {
+  text-decoration: underline;
+}
+
+.login-box-new span,
+.login-box-termos span {
+  color: #737373;
+  font-size: 13px;
+}
+
+.login-box-termos {
+  margin-top: 11px;
+}
+
+.footer-login {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: -323px;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 9999999;
+}
+
+.footer-flex {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-site * {
+  color: #737373;
+  font-weight: 500;
+}
+
+.footer-site {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0 50px 0;
+  width: 1000px;
+  font-size: 13px;
+}
+
+.ligue {
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 17px;
+}
+
+.footer-ul {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.footer-ul-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 250px;
+}
+
+.footer-a:hover {
+  text-decoration: underline;
+}
+
+.footer-lang-selector {
+  width: 140px;
+  height: 48px;
+  background-color: black;
+  border-radius: 2px;
+  border: 1px solid #333;
+}
+
+/* Página perfil */
+
 body {
-    background-color: #141414;
+  background-color: #141414;
 }
 
 .color-transparent {
-    width: 100%;
-    height: 68px;
-    background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
+  width: 100%;
+  height: 68px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  );
 }
 
 .profiles-container {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    right: 0;
-    text-align: center;
-    top: 0;
-    z-index: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 0;
 }
 
 h1 {
-    color: #fff;
-    font-size: 3.5vw;
-    font-weight: unset;
-    width: 100%;
+  color: #fff;
+  font-size: 3.5vw;
+  font-weight: unset;
+  width: 100%;
 }
 
 .profiles-container-list {
-    align-items: center;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 100;
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
 }
 
 .profiles-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-choose {
-    margin: 2em 0;
-    display: flex;
-    gap: 30px;
+  margin: 2em 0;
+  display: flex;
+  gap: 30px;
 }
 
 .profile-button {
-    background-color: transparent;
-    border: 1px solid grey;
-    color: grey;
-    cursor: pointer;
-    display: flex;
-    font-size: 1.2vw;
-    letter-spacing: .8px;
-    margin: 1em 0 1em;
-    padding: 0.5em 1.5em;
+  background-color: transparent;
+  border: 1px solid grey;
+  color: grey;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2vw;
+  letter-spacing: 0.8px;
+  margin: 1em 0 1em;
+  padding: 0.5em 1.5em;
 }
 
 .border {
-    width: 100%;
-    height: 100%;
-    border: 3px solid #ffffff00;
-    position: absolute;
-    top: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ffffff00;
+  position: absolute;
+  top: 0;
 }
 
 .border:hover {
-    border-radius: 4px;
-    border: 3px solid #fff;
+  border-radius: 4px;
+  border: 3px solid #fff;
 }
 
 .profile-avatar {
-    position: relative;
-    border-radius: 4px;
-    width: 144px;
-    height: 144px;
+  position: relative;
+  border-radius: 4px;
+  width: 144px;
+  height: 144px;
 }
 
 /* .profile-avatar img:hover {
@@ -98,25 +365,25 @@ h1 {
 } */
 
 .profile-avatar img {
-    border-radius: 4px;
-    /* box-sizing: border-box;
+  border-radius: 4px;
+  /* box-sizing: border-box;
     border: 3px solid #ffffff00; */
 }
 
 .profile-link:hover .profile-add {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .profile-name {
-    color: grey;
-    display: block;
-    font-size: 1.3vw;
-    line-height: 1.2em;
-    margin: 0.6em 0;
-    min-height: 1.8em;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
+  color: grey;
+  display: block;
+  font-size: 1.3vw;
+  line-height: 1.2em;
+  margin: 0.6em 0;
+  min-height: 1.8em;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
 }
 
 /* .profile-name:hover {
@@ -124,12 +391,58 @@ h1 {
 } */
 
 .profile-button:hover {
-    color: #fff;
-    border: 1px solid #fff;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .profile-link:hover .border,
 .profile-link:hover .profile-name {
   border-color: #fff;
   color: #fff;
+}
+
+/* Página home */
+
+.slider-area {
+  width: 100%;
+  height: 500px;
+}
+
+.slider-list {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.slider-card-img {
+  background-color: #fff;
+  width: 215px;
+  height: 120px;
+  border-radius: 8px;
+  transition: 0.5s ease-in-out;
+}
+
+.slider-card:hover .slider-card-img {
+  width: 250px;
+  height: 155px;
+}
+
+.slider-card-description {
+  background-color: #181818;
+  width: 215px;
+  height: 120px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.slider-card:hover .slider-card-description {
+  display: block;
+  opacity: 1;
+  width: 250px;
+  height: 155px;
+  transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out,
+    height 0.5s ease-in-out;
 }
